@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Для помощи всегда место и время!</title>
+    <link rel="stylesheet" type="text/css" href="./styles/bootstrap-reboot.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./styles/all_styles.css" media="screen">
+    <link rel="shortcut icon" href="./images/icon.png">
+    <script src="js/preloader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+
+    <div id="preloaders">
+        <img src="images/preloader.gif" alt="preloader">
+    </div>
+
+    <header class="h_header">
+        <div class="h_header_all">
+            <div class="h_header_all_logo"><a href="#"><img src="./images/logo1.png" alt="Логотип"></a></div>
+            <div class="h_header_all_title">
+                <p>Для помощи всегда место и время!</p>
+            </div>
+            <div class="h_header_all_social_networks">
+                <div class="h_header_all_social_networks_title">
+                    <p>Поделиться с друзьями</p>
+                </div>
+                <div class="h_header_all_social_networks_images">
+                    <div><a href="#"><img src="./images/fb.png" alt="Фейсбук"></a></div>
+                    <div><a href="#"><img src="./images/vkk.png" alt="Вконтакте"></a></div>
+                    <div><a href="#"><img src="./images/ok.png" alt="Одноклассники"></a></div>
+                    <div><a href="#"><img src="./images/ig.png" alt="Инстаграм"></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="m_main_part">
+        <div id="wrapper">
+            <div class="m_main_part_hirlanda"><img src="./images/hirlanda.png" alt="Гирлянда"></div>
+            <div class="m_main_part_stena"><img src="./images/stena.png" alt="Стена"></div>
+            <div class="m_main_part_fair"><img src="./images/fair.gif" alt="Камин"></div>
+            <div class="m_main_part_gifts" id="raz">
+                <img src="./images/gift1.png" class="swing2" alt="Подарок">
+                <img src="./images/gift2.png" class="swing2" alt="Подарок">
+                <img src="./images/gift2.png" class="swing2" alt="Подарок">
+                <img src="./images/gift1.png" class="swing2" alt="Подарок">
+                <div>
+                    <p><b>Ирина</b></p>
+                    <p>Желаю деткам счастливого Рождества и Нового года!</p>
+                    <p><b>Сумма: </b>80 BYN</p>
+                </div>
+            </div>
+            <div class="m_main_part_button"><button type="button">Помочь</button></div>
+            <div class="m_main_part_noski" id="raz1">
+                <img src="./images/n1.png" class="swing1" alt="Носок">
+                <img src="./images/n2.png" alt="Носок">
+                <img src="./images/n3.png" class="swing1" alt="Носок">
+                <img src="./images/n4.png" alt="Носок">
+                <img src="./images/n5.png" class="swing1" alt="Носок">
+                <img src="./images/n6.png" alt="Носок">
+                <div>
+                    <p><b>Григорий</b></p>
+                    <p>Пусть Новый год принесет чудо и подарит волшебство!</p>
+                    <p><b>Сумма: </b>10 BYN</p>
+                </div>
+            </div>
+            <div class="m_main_part_omela"><img src="./images/omela.png" class="swing1" alt="Омела"></div>
+            <form onsubmit="return validate2(this);">
+                <div class="c_container">
+                    <div class="c_close">
+                        <a href="#">
+                            <div class="c_close_button"><img src="./images/х.png" alt="Закрыть"></div>
+                        </a>
+                    </div>
+                    <div class="c_main_part">
+                        <div class="c_main_part_top">
+                            <div>
+                                <div class="c_main_part_all_summi">
+                                    <div class="c_main_part_summi">
+                                        <div class="c_main_part_summa"><img src="./images/5.png" alt="Сумма 5 рублей">
+                                        </div>
+                                        <div class="c_main_part_summa"><img src="./images/10.png" alt="Сумма 10 рублей">
+                                        </div>
+                                        <div class="c_main_part_summa"><img src="./images/20.png" alt="Сумма 20 рублей">
+                                        </div>
+                                    </div>
+                                    <div class="c_main_part_summi">
+                                        <div class="c_main_part_summa"><img src="./images/50.png" alt="Сумма 50 рублей">
+                                        </div>
+                                        <div class="c_main_part_summa"><img src="./images/80.png" alt="Сумма 80 рублей">
+                                        </div>
+                                        <div class="c_main_part_summa"><img src="./images/100.png"
+                                                alt="Сумма 100 рублей"></div>
+                                    </div>
+                                </div>
+                                <div class="c_main_part_all_summi_text">
+                                    <div><input value="Другая сумма"></div>
+                                    <div class="c_main_part_all_summi_text_BYN">BYN</div>
+                                </div>
+                            </div>
+                            <div class="c_main_part_prosmotr"><img src="./images/n_form.png" class="swing1" alt="Носок">
+                            </div>
+                        </div>
+                        <div class="c_buttons">
+                            <div><button class="c_button1">Ежемесячно</button></div>
+                            <div><button class="c_button2">Единоразово</button></div>
+                        </div>
+                        <div>
+                            <div class="c_inputs_top">
+                                <div class="c_inputs"><input type="text" name="fam" required placeholder="Фамилия*">
+                                </div>
+                                <div class="c_inputs"><input type="text" name="imia" required placeholder="Имя*"></div>
+                            </div>
+                            <div class="c_inputs_bottom">
+                                <div class="c_inputs"><input type="text" name="phone" placeholder="Телефон"></div>
+                                <div class="c_inputs"><input type="text" name="mail" id="mail" required
+                                        placeholder="E-mail*"></div>
+                            </div>
+                        </div>
+                        <div class="c_wishes">
+                            <div class="c_wish">Пожелание</div>
+                            <div class="c_input_wish"><input type="text" name="wish"></div>
+                        </div>
+                        <div class="c_check">
+                            <p><input type="checkbox" value="a5">Согласен с условиями публичной оферты</p>
+                        </div>
+                        <div class="c_form_button">
+                            <button type="submit" id="submit">Помочь</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="m_main_part_floor"><img src="./images/floor.png" alt="Пол"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="f_footer_all">
+            <div class="f_top">
+                <div class="f_top_left">
+                    <div>
+                        <a href="#">
+                            <p class="f_top_left_bold">О хосписе</p>
+                        </a>
+                        <a href="#">
+                            <p>История хосписа</p>
+                        </a>
+                        <a href="#">
+                            <p>Наша команда</p>
+                        </a>
+                        <a href="#">
+                            <p>Наши попечители</p>
+                        </a>
+                        <a href="#">
+                            <p>Отзывы</p>
+                        </a>
+                        <a href="#">
+                            <p>Отчеты</p>
+                        </a>
+                        <a href="#">
+                            <p>Friends of the<br> Belarusian Children’s <br>hospice</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="f_top_left_bold">Как помочь</p>
+                        </a>
+                        <a href="#">
+                            <p>Физические лица</p>
+                        </a>
+                        <a href="#">
+                            <p>Юридические лица</p>
+                        </a>
+                        <a href="#">
+                            <p>Для перевода <br>средств в валюте</p>
+                        </a>
+                        <a href="#">
+                            <p>Волонтерство</p>
+                        </a>
+                        <a href="#">
+                            <p>Автоволонтерство</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="f_top_left_bold">Наша деятельность</p>
+                        </a>
+                        <a href="#">
+                            <p>Что такое паллиатив</p>
+                        </a>
+                        <a href="#">
+                            <p>Наши программы</p>
+                        </a>
+                        <a href="#">
+                            <p>Наши проекты</p>
+                        </a>
+                        <a href="#">
+                            <p>404-family-not-found</p>
+                        </a>
+                        <a href="#">
+                            <p>Библиотека</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p class="f_top_left_bold">Новости</p>
+                        </a>
+                        <a href="#">
+                            <p class="f_top_left_bold">Контакты</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="f_top_right">
+                    <div>
+                        <p>ФАКС + 375 17 5035720</p>
+                    </div>
+                    <div>
+                        <p>ПРИЕМНАЯ + 375 17 5035715</p>
+                    </div>
+                    <div>
+                        <p>E-mail: hospice.belarus@gmail.com</p>
+                    </div>
+                    <div class="f_top_right_social_nerworks">
+                        <div><a href="#"><img src="./images/fb1.png" alt="Фейсбук"></a></div>
+                        <div><a href="#"><img src="./images/vk1.png" alt="Вконтакте"></a></div>
+                        <div><a href="#"><img src="./images/ok1.png" alt="Одноклассники"></a></div>
+                        <div><a href="#"><img src="./images/ig1.png" alt="Инстаграм"></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="f_bottom">
+                <div>
+                    <p>Работаем на 1С-Битрикс: Управление сайтом.</p>
+                </div>
+                <div class="f_bottom_copy">
+                    <p>© 2019 Белорусский детский хоспис Минский район,<br>д.Боровляны, ул.Березовая роща, 100А</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery.js"></script>
+  
+</body>
+
+</html>
