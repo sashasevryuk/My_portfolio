@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+	<script>
+		/*Вариант 0. 
+		Задание 1. Ввести с клавиатуры числовой (строки не принимать!)  
+		массив размером 10 элементов. Переставить в обратном порядке 
+		элементы массива, расположенные между его минимальным и максимальным 
+		по значению элементами. Если максимальный (минимальный) элементы 
+		повторяются, брать первый по счету минимальный и первый максимальный. 
+		Вывести в окно браузера первоначальный массив и преобразованный. 
+		Тест. Вводим [1, 2, 33, 4, 5, 6, 3, -5, 8, 33]  
+		Результат:  
+		Первоначальный массив: 1, 2, 33, 4, 5, 6, 3, -5, 8, 33 
+		Максимальный: 33, минимальный: -5.  
+		Преобразованный массив: 1, 2, 33, 3, 6, 5, 4, -5, 8, 33 */
+
+		/*Создаем пустой массив с 10 неопределенными элементами*/
+		mainArray = new Array(10);
+
+		/*Ввод 10 элементов массива*/
+		for (var i = 0; i < 10; i++) {
+			mainArray[i] = parseInt(prompt("Введите элемент массива"));
+			/*Проверяем, является ли введенное значение числом, если нет, ввод продолжается*/
+			if (isNaN(mainArray[i])) {
+				i--;
+			}
+		}
+		document.write("Первоначальный массив: " + mainArray);
+
+		/*Поиск максимальногои минимального элемента: 
+		сравниваем все элементы, производим замену*/
+		max = mainArray[0];
+		min = mainArray[0];
+		for (var j = 1; j < mainArray.length; j++) {
+			if (max < mainArray[j]) {
+				max = mainArray[j]
+			}
+			if (min > mainArray[j]) {
+				min = mainArray[j]
+			}
+		}
+		document.write("<br>Максимальный: " + max + ", ");
+		document.write("минимальный: " + min);
+
+		/*Ищем номер минимального и максимального элемента в массиве*/
+		var idx_max = mainArray.indexOf(max);
+		var idx_min = mainArray.indexOf(min);
+
+		/*Делим наш массив на три новых, во втором из которых 
+		будем менять порядок элементов*/
+		if (idx_min > idx_max) {
+			newArray1 = mainArray.slice(0, idx_max + 1);
+			newArray2 = mainArray.slice(idx_max + 1, idx_min);
+			newArray3 = mainArray.slice(idx_min, mainArray.length)
+		}
+		else if (idx_min < idx_max) {
+			newArray1 = mainArray.slice(0, idx_min + 1);
+			newArray2 = mainArray.slice(idx_min + 1, idx_max);
+			newArray3 = mainArray.slice(idx_max, mainArray.length)
+		}
+
+		/*Меняем порядок второго массива*/
+		newArray2.reverse();
+
+		/*Объединяем все три массива и выводим преобразованный массив*/
+		newArray = newArray1.concat(newArray2.concat(newArray3));
+		document.write("<br>Преобразованный массив: " + newArray);
+	</script>
+
+</head>
+
+<body>
+</body>
+
+</html>

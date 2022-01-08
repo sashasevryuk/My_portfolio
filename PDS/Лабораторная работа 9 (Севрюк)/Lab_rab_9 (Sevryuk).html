@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+</head>
+
+<body>
+	<div>
+		<div class="title1">Выбери песню:</div>
+		<div class="list1">
+			<ul>
+				<li>Кумба</li>
+				<li>Паветраны шар</li>
+				<li>Твой партрэт</li>
+				<li>Я еду</li>
+				<li>25, 26, 27</li>
+				<li>Нам усiм гамон!</li>
+				<li>Песьнi пра каханьне</li>
+			</ul>
+		</div>
+		<div class="title2">Лист для проигрывания: двойной клик удаляет песню</div>
+		<div class="list2"></div>
+	</div>
+
+	<script>
+		/*Задание 2.
+		Сверстайте HTML  и напишите скрипт,  выводящий по готовому массиву с названиями 
+		маркированный список песен. Внизу должен находится блок – плейлист. При клике на 
+		песню в списке она должна добавляться в плейлист. При двойном клике на песне в 
+		плейлисте она должна удаляться из плейлиста.*/
+		window.onload =	function (){
+			list_1 = document.getElementsByTagName("li");
+            for (var i=0; i<list_1.length; i++){
+				list_1[i].onclick = function(){ 
+					var item = document.createElement("p");
+					var tmp = this.innerHTML;
+					item.append(tmp);
+					list_2 = document.querySelector("div.list2");
+					list_2.append(item);
+					item.ondblclick = function(){
+						this.remove()
+					};
+        		} 
+			}
+		}   		
+	</script>
+	<style>
+		.title1, .title2{
+			background-color: aquamarine;
+			border: 2px dotted black;
+			padding: 20px;
+			font-size: 20px;
+			border-radius: 20px;
+			font-weight: bold;
+		}
+
+		.title1{
+			width: 300px;
+		}
+
+		.title2{
+			width: 500px;
+		}
+
+		.list1{
+			background-color: darkgray;
+			width: 300px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 2px solid black;
+			font-size: 18px;
+		}
+
+		.list2{
+			display: flex;
+			flex-wrap: wrap;
+			background-color: darkgray;
+			width: 540px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			margin-top: 20px;
+		}
+
+		p{
+			background-color: white;
+			font-size: 18px;
+			width: auto;
+			border: 2px solid black;
+			padding: 10px;
+			margin: 5px;
+			cursor: pointer;
+		}
+
+		li{
+			cursor: pointer;
+		}
+	</style>
+	
+</body>
+
+</html>

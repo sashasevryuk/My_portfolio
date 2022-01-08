@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        table td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+    <table id="table"></table>
+    <script type="text/javascript" charset="UTF-8"></script>
+    <script>
+        /*Вариант 0. 
+        Дополнительное задание: Написать функцию : print_spiral(), выводящую на экран числовые спирали.
+        Например: print_spiral(5,6)
+        1 2 3 4 5
+        18 19 20 21 6
+        17 28 29 22 7
+        16 27 30 23 8
+        15 26 25 24 9
+        14 13 12 11 10
+        Входные данные: ширина и высота спирали.
+        Вызов функции: print_spiral(width, height) */
+
+        var width = +prompt("Введите ширину спирали:");
+        var height = +prompt("Введите высоту спирали:");
+
+        //Проверка введенных значений ширины и высоты на достоверность
+        if (isNaN(width) || (width <= 0)) {
+            var z = 1;
+        }
+        else if (isNaN(height) || (height <= 0)) {
+            var z = 2;
+        }
+        else {
+            var z = 3;
+        }
+
+        while (z === 1) {
+            var width = +prompt("Введенное значение неверно. Введите ширину спирали еще раз:");
+            if (isNaN(width) || (width <= 0)) {
+                var z = 1;
+            }
+            else if (isNaN(height) || (height <= 0)) {
+                var z = 2;
+            }
+            else {
+                var z = 3;
+            }
+        }
+
+        while (z === 2) {
+            var height = +prompt("Введенное значение неверно. Введите высоту спирали еще раз:");
+            if (isNaN(width) || (width <= 0)) {
+                var z = 1;
+            }
+            else if (isNaN(height) || (height <= 0)) {
+                var z = 2;
+            }
+            else {
+                var z = 3;
+            }
+        }
+
+        while (z === 3) {
+            var table = document.querySelector('#table');
+            var itog = print_spiral(width, height);
+            fillTable(table, itog);
+        }
+
+        //Функция для создания спирали
+        function print_spiral(width, height) {
+            let result = new Array(height).fill().map(() => new Array(width).fill(""));
+            let counter = 1;
+            let left = 0;
+            let right = width - 1;
+            let top = 0;
+            let bottom = height - 1;
+
+            while (left <= right && top <= bottom) {
+                for (let i = left; i <= right; i++) {
+                    result[top][i] = counter;
+                    counter++;
+                }
+                top++;
+
+                for (let i = top; i <= bottom; i++) {
+                    result[i][right] = counter;
+                    counter++;
+                }
+                right--;
+
+                for (let i = right; i >= left; i--) {
+                    result[bottom][i] = counter;
+                    counter++;
+                }
+                bottom--;
+
+                for (let i = bottom; i >= top; i--) {
+                    result[i][left] = counter;
+                    counter++;
+                }
+                left++;
+            }
+
+            return result;
+        }
+
+        //Функция для вывода спирали в таблицу
+        function fillTable(table, arr) {
+            for (var i = 0; i <= arr.length; i++) {
+                var tr = document.createElement('tr');
+                for (var j = 0; j < arr[i].length; j++) {
+                    var td = document.createElement('td');
+                    td.innerHTML = arr[i][j];
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

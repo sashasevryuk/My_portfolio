@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+	<script>
+		/*Вариант 0. 
+		Задание 2. Оформите в виде массива данные меню из школьной 
+		столовой. В меню должно быть наименование блюда, вес порции,  
+		вид блюда (1-е, 2-е,3-е), цена. Состав меню – произвольный, 
+		но не менее 5 блюд. Вывод  на экран «Наименование блюда + 
+		вес + цена» по запросу вида блюда (если 1, то выводятся все 
+		супы, например). */
+
+		var Array_Number = ["1-е блюда", "2-е блюда", "3-е блюда"];
+		var Array_Name = [["Борщ", "Молочный суп", "Щавель"], ["Картошка", "Рис", "Гречка"], ["Кампот", "Сок", "Кисель"]];
+		var Array_Weight = [["110 гр", "120 гр", "140 гр"], ["150 гр", "130 гр", "120 гр"], ["0,2 л", "0,2 л", "0,2 л"]];
+		var Array_Price = [["5 р", "3 р", "4 р"], ["2,5 р", "3 р", "2,7 р"], ["1,5 р", "2 р", "1 р"]];
+
+		var number = parseInt(prompt("Введите номер блюда (1 - первое, 2 -второе, 3 - третье).         Введите любой символ для вывода всего меню."));
+
+		if (number === 1) {
+			document.write("<b>1-е блюда:</b><br>");
+			for (var i = 0; i < Array_Name[0].length; i++) {
+				document.write(Array_Name[0][i] + " - " + Array_Weight[0][i] + " - " + Array_Price[0][i] + "<br>")
+			}
+		}
+		else if (number === 2) {
+			document.write("<b>2-е блюда:</b><br>");
+			for (var i = 0; i < Array_Name[1].length; i++) {
+				document.write(Array_Name[1][i] + " - " + Array_Weight[1][i] + " - " + Array_Price[1][i] + "<br>")
+			}
+		}
+		else if (number === 3) {
+			document.write("<b>3-и блюда:</b><br>");
+			for (var i = 0; i < Array_Name[2].length; i++) {
+				document.write(Array_Name[2][i] + " - " + Array_Weight[2][i] + " - " + Array_Price[2][i] + "<br>")
+			}
+		}
+		else {
+			document.write("<b>МЕНЮ:</b><br>");
+			document.write("<b>1-е блюда:</b><br>");
+			for (var i = 0; i < Array_Name[0].length; i++) {
+				document.write(Array_Name[0][i] + " - " + Array_Weight[0][i] + " - " + Array_Price[0][i] + "<br>")
+			}
+			document.write("<b>2-е блюда:</b><br>");
+			for (var i = 0; i < Array_Name[1].length; i++) {
+				document.write(Array_Name[1][i] + " - " + Array_Weight[1][i] + " - " + Array_Price[1][i] + "<br>")
+			}
+			document.write("<b>3-и блюда:</b><br>");
+			for (var i = 0; i < Array_Name[2].length; i++) {
+				document.write(Array_Name[2][i] + " - " + Array_Weight[2][i] + " - " + Array_Price[2][i] + "<br>")
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+}
+
+
+button {
+    height: 100px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: .9rem;
+}
+
+button:hover {
+    background: orangered;
+}
+
+button:active {
+    background: #000;
+    color: #fff;
+}
+
+.slider {
+    width: 290px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-line, .slider-line1, .slider-line2 {
+    width: 1160px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    left: 0;
+}

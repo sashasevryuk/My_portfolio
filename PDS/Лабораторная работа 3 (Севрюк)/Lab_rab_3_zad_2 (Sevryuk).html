@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+	<script>
+		/*Вариант 0. 
+		Задание 2. Билет называют «счастливым», если сумма первых двух цифр номера равна сумме двух
+		последних (номер – четырехзначный). При вводе начального и конечного номера диапазона
+		билетов необходимо распечатать список «счастливых» билетов в диапазоне. Результат
+		вывести в окно браузера.
+		Например: введены числа 1234 и 1415.
+		Вывод:
+		Счастливые билеты в диапазоне от 1234 до 1415:
+		1304
+		1313
+		1322
+		1331
+		1340
+		1405
+		1414*/
+
+		let numb_first = +prompt("Введите начальный номер диапазона билетов:");
+		let numb_last = +prompt("Введите конечный номер диапазона билетов:");
+		let n1, n2;
+		document.write("Счастливые билеты в диапазоне от " + numb_first + " до " + numb_last + ":");
+
+		if (isNaN(numb_first) || isNaN(numb_last)) {
+			document.write("<br>Вы ввели неверный диапазон билетов (скорее всего одно или оба введенных значения не являются числами).");
+		}
+		else {
+			if ((numb_first > 999 && numb_first < 10000 && numb_first === parseInt(numb_first, 10)) && (numb_last > 999 && numb_last < 10000 && numb_last === parseInt(numb_last, 10))) {
+				if (numb_first >= numb_last) {
+					document.write("<br>Вы ввели неверный диапазон билетов (скорее всего первое число больше либо равно второму).");
+				}
+				else {
+					for (numb_first; numb_first < numb_last; numb_first++) {
+						n4 = (numb_first % 10);
+						n3 = ((numb_first % 100) - n4) / 10;
+						n2 = ((numb_first % 1000) - (numb_first % 100)) / 100;
+						n1 = ((numb_first % 10000) - (numb_first % 1000)) / 1000;
+						if (n1 + n2 === n3 + n4) {
+							document.write("<br>" + numb_first);
+						}
+						else {
+							document.write("");
+						}
+					}
+				}
+			}
+			else {
+				document.write("<br>Вы ввели неверный диапазон билетов (скорее всего введенные числа не входят в диапазон положительных четырехзначных чисел либо являются не целыми).");
+			}
+		}
+
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

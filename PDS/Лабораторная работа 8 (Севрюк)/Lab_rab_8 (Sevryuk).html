@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+</head>
+
+<body>
+	<input type="button" onclick= "wind_open(1);" value = "открыть окно!"><br>
+	<input type="button" onclick="setTimeout(function(){wind_close()}, 5000);" value = "убить окно!">
+	<script>
+		/*Вариант 0. 
+		Написать программу, выводящую на экран две кнопки: открыть окно! убить окно!
+		При щелчке на кнопке «открыть окно!»  должно появиться приглашение ввести текст, 
+		который потом должен отобразиться в новом (втором) окне шириной и высотой в 300 
+		пикселей. При щелчке на кнопке «убить окно!» в исходном окне вместо кнопок через 
+		5 секунд вывести: «Предыдущее окно было уничтожено» - кнопки при этом пропадают. 
+		Второе окно закрыть.*/
+		var my_window
+
+		function wind_open(){
+			var txt = prompt("Введите текст, который отобразиться в новом окне:");
+			my_window = window.open("", "new_window", "width=300, height=300");
+			my_window.focus();
+			my_window.document.write(txt);
+			my_window.document.close();
+		};
+
+		function wind_close(){
+			if(my_window){
+				my_window.close();
+				document.write ("Предыдущее окно было уничтожено");
+			}
+			
+		}
+	</script>
+	<style>
+		input, input:active, input:focus{
+			border: none;
+			background-color: transparent;
+			font-size: 20px;
+		}
+
+		input:active, input:focus{
+			color: red;
+		}
+		
+	</style>
+</body>
+
+</html>

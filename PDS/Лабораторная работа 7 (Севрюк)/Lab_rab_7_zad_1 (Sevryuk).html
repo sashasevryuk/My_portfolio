@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" charset="UTF-8"></script>
+	<script>
+		/*Вариант 0. 
+		Задание 1. */
+
+		//Осуществляем ввод с клавиатуры в массив числа от 1 до 9
+		var arr = [];
+		for (var i = 0; i < 10; i++) {
+			arr[i] = prompt("Введите число от 1 до 9 (включая числа 1 и 9). \nЧисло " + (i+1) + ":");
+		}
+
+		//Загружаем в массив рандомные значения от 1 до 9
+		var arr2 = [];
+		for (var i = 0; i < 10; i++) {
+			arr2[i] = Math.floor(Math.random() * 9) + 1;
+		}
+
+		//Сравниваем значения в массивах (введенном и сгенерированном рандомно)
+		var j = 0;
+		for (var i = 0; i < 10; i++) {
+			if (arr[i] == arr2[i]) {
+				document.write("Введенное число: " + arr[i] + " Случайное число: " + arr2[i] + " Вы угадали!" + "<br>");
+				j++;
+			}
+			else {
+				document.write("Введенное число: " + arr[i] + " Случайное число: " + arr2[i] + "<br>");
+			}
+		}
+
+		//Рассчитываем процент совпадений
+		var persent = (j / 10) * 100;
+		document.write("Процент совпадений: " + persent + " %" + "<br>");
+		if (persent >= 20) {
+			document.write("Возможно, Вы - экстрасенс! <br>");
+		}
+
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

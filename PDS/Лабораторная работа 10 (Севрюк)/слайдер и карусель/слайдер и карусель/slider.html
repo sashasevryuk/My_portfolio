@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<title>Travel</title>
+	
+<style>
+#maindiv {
+	position: relative;
+	margin: 0px auto;
+	padding: 5px;
+	width: 60%;
+	height:525px;
+	background-color: #381000;
+	border: 3px solid black;
+	border-radius:50px;
+}
+#scr {
+	position: relative;
+	margin:0px auto;
+	width: 460px;
+	height: 460px;
+	background-color: white;
+	background-size: cover;
+	border: 2px solid white;
+}
+button {
+	position: relative;
+	/*margin: 5px 45%;*/
+	font: 50pt;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	background: #A00004;
+	border: 2px solid white;
+}
+.left {
+	right: -700px;
+	top: 200px;
+	/*left:403px;
+	top: 503px;*/
+}
+.right {
+	left: 5px;
+	top: 200px;
+}
+</style>
+						<!-- СКРИПТ ДЛЯ СЛАЙДЕРА -->
+	<script>
+	window.onload = function() { // запуск слайдера после загрузки документа
+		slider.init();
+		setInterval(function() { // ставим пятисекундный интервал для перелистывания картинок
+			slider.right();
+		},5000);
+	};
+	var slider = {
+		slides:['images/img1.jpg','images/img2.jpg','images/img3.jpg','images/img4.jpg','images/img5.jpg'],
+		frame:0, // текущий кадр для отбражения - индекс картинки из массива
+		set: function(image) { // установка нужного фона слайдеру
+			document.getElementById("scr").style.backgroundImage = "url("+image+")";
+		},
+		init: function() { // запуск слайдера с картинкой с нулевым индексом
+			this.set(this.slides[this.frame]);
+		},
+		left: function() { // крутим на один кадр влево
+			this.frame--;
+			if(this.frame < 0) this.frame = this.slides.length-1;
+			this.set(this.slides[this.frame]);
+		},
+		right: function() { // крутим на один кадр вправо
+			this.frame++;
+			if(this.frame == this.slides.length) this.frame = 0;
+			this.set(this.slides[this.frame]);		
+		}
+	};
+	</script>
+<body>
+
+	<div id="maindiv">
+		<button class="left" onclick="slider.left();">>>></button>
+		<button class="right" onclick="slider.right();"><<<</button>
+		<div id="scr"></div>
+	</div> 
+	
+
+</body>
+
+</html>
