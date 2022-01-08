@@ -1,0 +1,398 @@
+@font-face{
+    font-family: "PTRootUI_Regular";
+    src: url("../fonts/PT-Root-UI_Regular.web.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Montserrat_Medium";
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "PTRootUI_Medium";
+    src: url("../fonts/PT-Root-UI_Medium.web.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*Header of the site*/
+
+header a:link, header a:visited, header a:hover, header a:active{
+    color: black;
+}
+
+header{
+    background-color: #72C7F7;
+    box-shadow: 0px 1px 20px rgba(89, 189, 246, 0.5);
+    height: 120px;
+    font-family: "PTRootUI_Medium";
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.logo_header{
+    padding: 30px 0;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row;
+    padding: 48.8px 0;
+}
+
+.navigation div:not(:first-child){
+    padding-left: 50px;
+}
+
+.menu{
+    display: none;
+}
+
+@media screen and (max-width: 1094px){
+    header{
+        padding: 0 45px; 
+    }
+}
+
+@media screen and (max-width: 934px){
+    .navigation div:not(:first-child){
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    header{
+        height: 80px;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .logo_header img {
+        height: 40px;
+    }
+
+    .logo_header{
+        padding: 20px 0;
+    }
+
+    .menu{
+        display: block;
+        padding: 26px 0;
+    }
+}
+
+
+/*Main part of the site*/
+.block1{
+    background-color:white;
+    box-shadow: 0px 1px 20px rgba(89, 189, 246, 0.2);
+    height: 530px;
+    padding: 0 100px;
+    padding-top: 80px;
+    margin-top: 80px;
+}
+
+.main_body1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text_information{
+    width: 442px;
+}
+
+.hello{
+    font-family: "Montserrat_Medium";
+    color: #59BDF6;
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.title{
+    font-family: "Montserrat_Medium";
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-top: 7px;
+    padding-bottom: 30px;
+}
+
+.text{
+    font-family: "PTRootUI_Regular";
+    font-size: 18px;
+    line-height: 23px;
+    padding-bottom: 53px;
+}
+
+button{
+    background-color: #59BDF6;
+    border-radius: 15px;
+    border: none;
+    font-family: "PTRootUI_Medium";
+    cursor: pointer;
+}
+
+button:hover, button:active, button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color: #36adf1;
+}
+
+.button_block1{
+    height: 50px;
+    width: 206px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    font-size: 18px;
+}
+
+.photo_block1 img{
+    padding-left: 40px;
+}
+
+
+@media screen and (max-width: 1170px){
+    .photo_block1 img{
+        width: 370px;
+        padding-top: 30px;
+        padding-left: 0;
+    }
+
+    .text_information{
+        width: 355px;
+    }
+
+    .hello{
+        font-size: 28px;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .text{
+        width: 325px;
+    }
+
+    .photo_block1{
+        padding-top: 43px;
+    }
+    
+    .photo_block1 img{
+        width: 265px;
+    } 
+
+}
+
+@media screen and (max-width: 700px){  
+    .photo_block1{
+        display: none;  
+    }
+
+    .text{
+        width: 442px;
+    }
+
+    .block1{
+        height: 345px;
+        padding-top: 40px;
+    }
+
+    .text_information{
+        width: 300px;
+    }
+
+    .hello{
+        font-size: 20px;
+    }
+
+    .title{
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    .text{
+        font-size: 12px;
+        line-height: 15.6px;
+        width: 300px;
+        padding-bottom: 30px;
+    }
+
+    .button_block1{
+        height: 40px;
+        width: 165px;
+        padding-top: 7px;
+        font-size: 16px;
+    }
+}
+
+/*Footer of the site*/
+
+footer a:link, footer a:visited, footer a:hover, footer a:active{
+    color: black;
+}
+
+footer{
+    background-color: #72C7F7;
+    box-shadow: 0px -1px 20px rgba(89, 189, 246, 0.5);
+    height: 150px;
+    font-size: 16px;
+    font-family: "PTRootUI_Regular";
+    line-height: 130%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo_footer{
+    padding: 45px 0;
+}
+
+.short_logo_footer, .short1_logo_footer{
+    display: none;
+}
+
+.footer_information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 41px;
+}
+
+.second_line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_information .footer_information_block{
+    padding-left: 69px;
+}
+
+.title_bold{
+    font-family: "PTRootUI_Medium";
+}
+
+@media screen and (max-width: 1094px){
+    .container{
+        padding: 0 45px; 
+    }
+
+    .logo_footer{
+        display: none;
+    }
+    
+    .short_logo_footer{
+        display: block;
+        padding: 45px 0;
+    }
+
+}
+
+@media screen and (max-width: 847px){
+    footer, .container{
+        height: 241px;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_information{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 41px 0;
+    }
+
+    .first_line{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer_information_block{
+        margin-left: auto;
+    }
+
+    .short1_logo_footer{
+        display: block;
+    }
+
+    .short_logo_footer{
+        display: none;
+    }
+
+    .footer_information .footer_information_block{
+        padding-left: 36px;
+    }
+
+    .footer_information_block:nth-child(1){
+        padding-left: 0px;
+    }
+}
+
+
+/*burger*/
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: fixed;
+    right: 0px;
+    background-color: #59BDF6;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (min-width: 1301px){
+    .dropdown-content{
+        display: none;
+    }
+}

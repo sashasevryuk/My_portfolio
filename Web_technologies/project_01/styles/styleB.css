@@ -1,0 +1,64 @@
+.main{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.header{
+	justify-content: flex-start;
+}
+
+.point{
+	padding-left:20px;
+	font-size: 40px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.cub{
+    width: 100px;
+    height: 150px;
+    min-width: 100px;
+    background-color: #eeeff2;
+    border-left: 10px dotted #D0D0FF;
+    box-sizing: content-box;
+}
+
+.cub:not(:last-child){
+    margin-right: 10px;
+}
+
+.cub:last-child{
+    margin-left: auto;
+    margin-top: auto;
+}
+
+div p{
+    font-size: 40px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-family: 'Tahoma';
+    padding-right: 20px;
+}
+
+.cub:nth-child(n):hover{
+    background-color: yellow;
+    border-color: goldenrod;
+    cursor: pointer;
+}
+
+img{
+    width: 30px;
+    padding-right: 20px;
+}
+
+

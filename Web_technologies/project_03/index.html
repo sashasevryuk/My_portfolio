@@ -1,0 +1,41 @@
+<html lang="ru">
+
+<head>
+  <title>alcohol</title>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+.point img{
+width: 30px}
+</style>
+</head>
+
+<body>
+<div class="header">
+  <div class="point"><a href="../default.shtml"><img src="./images/back.png"></a></div>
+  </div>
+<h1><font color='red'>Balmer peak</font></h1>
+Weight:<input type="number" size="1" id="txtWeight" value="48">
+<input type="button" size="2" onClick="WidmarkGo()" value="Calc"><br/>
+<span id="Widmark"></span>
+<script>
+function WidmarkGo(){
+var N = document.getElementById("txtWeight").value;
+var W = Widmark(N);
+document.getElementById("Widmark").innerHTML = W;
+}
+function Widmark(N) {
+var m = N;
+var A = 1.35 * m * 0.6;
+var F = "<br>Cognac - <b><font color='red'>" + Math.round(A / 0.4) + "</b> gr.</font><br>" + "Port wine - <b><font color='red'>" + Math.round(A / 0.19) + "</b>gr.</font><br> Dry wine - <b><font color='red'>" + Math.round(A / 0.12) + "</b> gr.</font><br>" + "Beer - <b><font color = 'red'>" + Math.round(A / 0.06) + "</b> gr.</font><br>";
+return F;
+}
+</script><br/>
+
+
+</body>
+</html> 
+
+
+
+
