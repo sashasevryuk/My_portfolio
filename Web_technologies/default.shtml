@@ -16,25 +16,25 @@
   <header id="main">
     <div class="logo_header"><a href="#main"><img src="./images/logo.png" alt="Логотип"></a></div>
     <div class="navigation">
-      <div> <a href="./project_01">CS142_1</a></div>
-      <div> <a href="./project_02">Google</a></div>
-      <div> <a href="./project_03">Balmer</a></div>
-      <div> <a href="./project_04">Balmer C#</a></div>
-      <div> <a href="./project_05">IP Address</a></div>
-      <div> <a href="./project_06">Google-my</a></div>
-      <div> <a href="./project_07">Bremen</a></div>
+      <div> <a href="./project_01/index.html">CS142_1</a></div>
+      <div> <a href="./project_02/index.html">Google</a></div>
+      <div> <a href="./project_03/index.html">Balmer</a></div>
+      <div> <a href="./project_04/Default.aspx">Balmer C#</a></div>
+      <div> <a href="./project_05/Default.aspx">IP Address</a></div>
+      <div> <a href="./project_06/Default.aspx">Google-my</a></div>
+      <div> <a href="./project_07/Default.aspx">Bremen</a></div>
     </div>
     <div class="dropdown">
       <div class="menu"><a href="#"><img src="./images/menu.png" alt="Бургер меню" class="dropbtn"
             onclick="myFunction()"></a></div>
       <div id="myDropdown" class="dropdown-content">
-        <div> <a href="./project_01">CS142_1</a></div>
-        <div> <a href="./project_02">Google</a></div>
-        <div> <a href="./project_03">Balmer</a></div>
-        <div> <a href="./project_04">Balmer #</a></div>
-        <div> <a href="./project_05">IP Address</a></div>
-        <div> <a href="./project_06">Google-my</a></div>
-        <div> <a href="./project_07">Bremen</a></div>
+        <div> <a href="./project_01/index.html">CS142_1</a></div>
+        <div> <a href="./project_02/index.html">Google</a></div>
+        <div> <a href="./project_03/index.html">Balmer</a></div>
+        <div> <a href="./project_04/Default.aspx">Balmer #</a></div>
+        <div> <a href="./project_05/Default.aspx">IP Address</a></div>
+        <div> <a href="./project_06/Default.aspx">Google-my</a></div>
+        <div> <a href="./project_07/Default.aspx">Bremen</a></div>
       </div>
     </div>
   </header>
@@ -72,18 +72,18 @@
           <div class="footer_information_block">
             <div class="title_bold">Работы</div>
             <div>
-              <div><a href="./project_01">CS142_1</a></div>
-              <div><a href="./project_02">Google</a></div>
+              <div><a href="./project_01/index.html">CS142_1</a></div>
+              <div><a href="./project_02/index.html">Google</a></div>
             </div>
           </div>
           <div class="footer_information_block">
-            <div><a href="./project_03">Balmer</a></div>
-            <div><a href="./project_04">Balmer C#</a></div>
-            <div><a href="./project_05">IP Address</a></div>
+            <div><a href="./project_03/index.html">Balmer</a></div>
+            <div><a href="./project_04/Default.aspx">Balmer C#</a></div>
+            <div><a href="./project_05/Default.aspx">IP Address</a></div>
           </div>
           <div class="footer_information_block">
-            <div><a href="./project_06">Google-my</a></div>
-            <div><a href="./project_07">Bremen</a></div>
+            <div><a href="./project_06/Default.aspx">Google-my</a></div>
+            <div><a href="./project_07/Default.aspx">Bremen</a></div>
           </div>
         </div>
       </div>
