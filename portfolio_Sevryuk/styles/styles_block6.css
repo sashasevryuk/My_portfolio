@@ -1,0 +1,190 @@
+.block6{
+    background-color:white;
+    box-shadow: 0px 1px 20px rgba(89, 189, 246, 0.2);
+    height: 725px;
+    padding: 50px 100px;
+}
+
+.block6, .main_body6, .social_icon, .left_part, .social, .right_part, .block_title6{
+    display: flex;
+}
+
+.main_body6, .social_icon{
+    flex-direction: row;
+}
+
+.block6, .left_part, .social, .right_part{
+    flex-direction: column;
+}
+
+.main_body6, .block_title6{
+    justify-content: center;
+}
+
+.block6, .social_icon, .left_part, .social, .right_part{
+    justify-content: space-between;
+}
+
+.right_part, .right_part input, .right_part input::placeholder, textarea, textarea::placeholder{
+    font-family: "PTRootUI_Regular";
+    line-height: 130%; 
+}
+
+.right_part{
+    width: 444px;
+    height: 527px;
+    border: 3px solid #59BDF6;
+    border-radius: 20px;
+    padding: 46px 50px;
+    margin-left: 80px;
+    font-size: 18px;
+}
+
+.social{
+    font-family: "PTRootUI_Medium";
+    font-size: 22px;
+    line-height: 130%;  
+}
+
+.social_icon{
+    padding-top: 20px;
+}
+
+.block_title6{
+    font-family: "Montserrat_Medium";
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;   
+    background-image: url(../images/title_background6.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.right_part input, textarea{
+    border: 1px solid #59BDF6;
+    border-radius: 10px;
+    width: 344px;
+    font-size: 16px;
+}
+
+input{
+    padding: 9px 15px;
+}
+
+textarea{
+    height: 80px;
+    padding: 10px 15px;
+}
+
+.right_part input{
+    height: 40px;
+}
+
+.right_part input::placeholder, textarea::placeholder{
+    font-size: 16px;
+    color: #C4C4C4;
+}
+
+.right_part input:focus, .right_part input:hover, .right_part input:active, textarea:focus, textarea:hover, textarea:active{
+    outline: none;
+}
+
+button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 1170px){
+    .block6{
+        height: 904px;
+    }
+    
+    .main_body6{
+        flex-direction: column-reverse;
+    }
+    
+    .image6{
+        display: none;
+    }
+
+    .right_part{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+    }
+
+    .social_icon{
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    .social div{
+        text-align: center;
+    }
+
+    .social_icon div:not(:first-child){
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .block6{
+        height: 760px;
+        padding: 50px 50px;
+    }
+       
+    .social_icon div img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .social_icon div:not(:first-child){
+        margin-left: 25px;
+    }
+
+    .social div{
+        font-size: 16px;
+    }
+
+    .right_part{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 298px;
+        height: 489px;
+        padding: 30px 33px;
+        font-size: 16px;
+    }
+
+    .right_part input, textarea{
+        border-radius: 10px;
+        width: 230px;
+        font-size: 14px;
+    }
+    
+    .right_part input::placeholder, textarea::placeholder{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .button_block6{
+        width: 140px;
+        height: 40px;
+        font-size: 16px;
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+
+    .social_icon{
+        padding-top: 10px;
+    }
+
+    .block_title6{
+        font-size: 20px;  
+        background-image: url(../images/title_background6_telephone.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+}

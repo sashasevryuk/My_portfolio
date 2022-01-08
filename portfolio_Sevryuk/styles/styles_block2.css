@@ -1,0 +1,129 @@
+.block2{
+    background-color:white;
+    box-shadow: 0px 1px 20px rgba(89, 189, 246, 0.2);
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 100px;
+}
+
+.block_title2{
+    font-family: "Montserrat_Medium";
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/title_background2.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.main_body2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.main_body2_information{
+    margin-left: 35px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_body2_information_text{
+    font-family: "PTRootUI_Regular";
+    font-size: 18px;
+    line-height: 130%;  
+    padding-top: 25px;
+}
+
+.buttons label{
+    border-radius: 15px;
+    border: none;
+    font-family: "PTRootUI_Regular";
+    height: 42px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.buttons>input[type="radio"] {
+    display: none;
+}
+
+.buttons>input[type="radio"]:checked+label {
+    background-color: #36adf1;
+    font-family: "PTRootUI_Medium";
+}
+
+.main_body2_information .buttons .main_body2_information_text, .main_body2_information .buttons .main_body2_information_text{
+    display: none;
+}
+
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4 {
+    display: block;
+}
+
+@media screen and (max-width: 1170px){
+    .photo_block2{
+        display: none;
+    }
+
+    .block2{
+        padding: 50px 45px;
+    }
+
+    .main_body2_information{
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 766px){
+    .main_body2{
+        margin-top: 30px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .block_title2{
+        font-size: 21px;
+        background-image: url(../images/title_background2_telephone.png);
+    }
+    
+    .block2{
+        height: 462px;
+    }
+
+    .main_body2_information{
+        width: 300px;
+    }
+
+    .main_body2_information_text{
+        font-size: 12px;
+        padding-top: 10px;
+    }
+
+    .buttons label{
+        font-size: 16px;
+        padding-top: 8px;
+    }
+
+    .label_3{
+        margin-left: 60px;
+    }
+}

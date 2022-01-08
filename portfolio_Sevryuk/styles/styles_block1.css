@@ -1,0 +1,147 @@
+.block1{
+    background-color:white;
+    box-shadow: 0px 1px 20px rgba(89, 189, 246, 0.2);
+    height: 530px;
+    padding: 0 100px;
+    padding-top: 80px;
+}
+
+.main_body1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.text_information{
+    width: 442px;
+}
+
+.hello{
+    font-family: "Montserrat_Medium";
+    color: #59BDF6;
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.title{
+    font-family: "Montserrat_Medium";
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding-top: 7px;
+    padding-bottom: 30px;
+}
+
+.text{
+    font-family: "PTRootUI_Regular";
+    font-size: 18px;
+    line-height: 23px;
+    padding-bottom: 53px;
+}
+
+button{
+    background-color: #59BDF6;
+    border-radius: 15px;
+    border: none;
+    font-family: "PTRootUI_Medium";
+    cursor: pointer;
+}
+
+button:hover, button:active, button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color: #36adf1;
+}
+
+.button_block1{
+    height: 50px;
+    width: 206px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    font-size: 18px;
+}
+
+.photo_block1 img{
+    padding-left: 40px;
+}
+
+
+@media screen and (max-width: 1170px){
+    .photo_block1 img{
+        width: 370px;
+        padding-top: 30px;
+        padding-left: 0;
+    }
+
+    .text_information{
+        width: 355px;
+    }
+
+    .hello{
+        font-size: 28px;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .text{
+        width: 325px;
+    }
+
+    .photo_block1{
+        padding-top: 43px;
+    }
+    
+    .photo_block1 img{
+        width: 265px;
+    } 
+
+}
+
+@media screen and (max-width: 700px){  
+    .photo_block1{
+        display: none;  
+    }
+
+    .text{
+        width: 442px;
+    }
+
+    .block1{
+        height: 345px;
+        padding-top: 40px;
+    }
+
+    .text_information{
+        width: 300px;
+    }
+
+    .hello{
+        font-size: 20px;
+    }
+
+    .title{
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    .text{
+        font-size: 12px;
+        line-height: 15.6px;
+        width: 300px;
+        padding-bottom: 30px;
+    }
+
+    .button_block1{
+        height: 40px;
+        width: 165px;
+        padding-top: 7px;
+        font-size: 16px;
+    }
+}
